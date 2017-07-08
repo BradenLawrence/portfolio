@@ -4,6 +4,7 @@ var express = require("express"),
     
 // GENERAL APP SETTINGS
 app.set("view engine", "ejs")
+app.use(express.static(__dirname + "/assets"))
 
 // ROUTES
 //  - Home
