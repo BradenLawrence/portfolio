@@ -1,6 +1,18 @@
 // PACKAGES
-var express = require("express"),
-    app     = express()
+var express     = require("express"),
+    app         = express(),
+    mongoose    = require("mongoose")
+    
+// MODELS
+var Category    = require("./models/category.js"),
+    Project     = require("./models/project"),
+    Image       = require("./models/image.js")
+    
+    
+// MONGOOSE SETTINGS
+mongoose.Promise = global.Promise
+mongoose.connect("mongodb://localhost/portfolio")
+
     
 // GENERAL APP SETTINGS
 app.set("view engine", "ejs")
