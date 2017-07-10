@@ -1,10 +1,10 @@
 var mongoose = require("mongoose"),
-var Image    = require("./image.js")
+    Image    = require("./image.js")
 
 var projectSchema = new mongoose.Schema({
     title:  String,
     date:   Date,
-    images: [Image],
+    images: [String],
     description:    String,
     client: String,
     media:  [String],

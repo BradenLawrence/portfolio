@@ -1,9 +1,12 @@
 var mongoose = require("mongoose"),
-var Project  = require("./project.js")
+    Project  = require("./project.js")
 
 var categorySchema = new mongoose.Schema({
     name:   String,
-    projects: {Project}
+    projects: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Project"
+    }
 })
 
 module.exports = mongoose.model("Category", categorySchema)
