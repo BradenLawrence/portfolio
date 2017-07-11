@@ -25,7 +25,8 @@ app.use(express.static(__dirname + "/assets"))
 // seedImages()
 // seedProjects()
 // seedCategories()
-
+mongoose.Promise = global.Promise
+mongoose.connect("mongodb://localhost/portfolio")
 
 
 // ROUTES
@@ -36,7 +37,16 @@ app.get("/", function(request, response){
 
 //  - Index
 app.get("/portfolio", function(request, response){
-    response.render("index")
+    Category.find({}).populate({
+        path:       "projects",
+        populate:   {path: "images"}
+        }).exec(function(error, returnedCategories){
+        if(error){
+            console.log(error)
+        } else {
+            response.render("index", {categories: returnedCategories})
+        }
+    })
 })
 
 //  - Show

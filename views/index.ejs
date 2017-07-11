@@ -16,6 +16,40 @@
       </a>
     </div>
 
+    <% categories.forEach(function(category) { %>
+    
+    <div class="ui segment">
+      <h3 class="ui header"><%= category.name %></h3>
+      <div class="ui link items">
+        
+        <% category.projects.forEach(function(project) { %>
+        
+          <div class="item">
+            <div class="ui small image">
+              <img src="<%= project.images[0].url %>">
+            </div>
+            <div class="content">
+              <div class="header"><%= project.title %></div>
+              <div class="meta">
+                <span class="client"><%= project.client %></span>
+                <span class="media">
+                  <% project.media.forEach(function(mediaType) { %>
+                    <%= mediaType %>, 
+                  <% }) %>
+                </span>
+              </div>
+              <div class="description">
+                <p><%= project.description %></p>
+              </div>
+            </div>
+          </div>
+          <% if(category.projects.indexOf(project) < (category.projects.length-1)){ %>
+            <div class="ui divider"></div>
+          <% } %>
+          </div>
+         <% }) %>
+         </div>
+    <% }) %>
     
     <div class="ui segment">
       <h3 class="ui header">User Experience</h3>
