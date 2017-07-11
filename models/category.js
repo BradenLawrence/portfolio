@@ -3,10 +3,12 @@ var mongoose = require("mongoose"),
 
 var categorySchema = new mongoose.Schema({
     name:   String,
-    projects: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Project"
-    }
+    projects: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Project"
+        }
+    ]
 })
 
 module.exports = mongoose.model("Category", categorySchema)

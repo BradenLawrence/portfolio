@@ -5,7 +5,8 @@ var express     = require("express"),
     
 // SEEDS
 var seedImages      = require("./seeds/image"),
-    seedProjects    = require("./seeds/project")
+    seedProjects    = require("./seeds/project"),
+    seedCategories  = require("./seeds/category")
     
 // MONGOOSE SETTINGS
 mongoose.Promise = global.Promise
@@ -22,7 +23,9 @@ app.use(express.static(__dirname + "/assets"))
 
 // SEEDS
 // seedImages()
-seedProjects()
+// seedProjects()
+// seedCategories()
+
 
 
 // ROUTES
