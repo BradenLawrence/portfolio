@@ -4,7 +4,7 @@ var mongoose    = require("mongoose"),
 var myImages = [
     {
         name:   "Title Page",
-        url:    "./assets/images/weRead_title.png",
+        url:    "/images/weRead_title.png",
         cover:  true
     }
 ]
