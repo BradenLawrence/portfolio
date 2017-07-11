@@ -3,6 +3,10 @@ var express     = require("express"),
     app         = express(),
     mongoose    = require("mongoose")
     
+// SEEDS
+var seedImages      = require("./seeds/image"),
+    seedProjects    = require("./seeds/project")
+    
 // MONGOOSE SETTINGS
 mongoose.Promise = global.Promise
 mongoose.connect("mongodb://localhost/portfolio")
@@ -15,6 +19,11 @@ var Category    = require("./models/category.js"),
 // GENERAL APP SETTINGS
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + "/assets"))
+
+// SEEDS
+// seedImages()
+seedProjects()
+
 
 // ROUTES
 //  - Home
