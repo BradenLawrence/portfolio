@@ -20,16 +20,16 @@
     
     <div class="ui segment">
       <h3 class="ui header"><%= category.name %></h3>
-      <div class="ui link items">
+      <div class="ui items">
         
         <% category.projects.forEach(function(project) { %>
         
           <div class="item">
-            <div class="ui small image">
+            <a class="ui small image" href="/portfolio/<%= project._id %>">
               <img src="<%= project.images[0].url %>">
-            </div>
+            </a>
             <div class="content">
-              <div class="header"><%= project.title %></div>
+              <a class="header" href="/portfolio/<%= project._id %>"><%= project.title %></a>
               <div class="meta">
                 <span class="client"><%= project.client %></span>
                 <span class="media">

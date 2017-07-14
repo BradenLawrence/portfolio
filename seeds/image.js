@@ -6,6 +6,26 @@ var myImages = [
         name:   "Title Page",
         url:    "/images/weRead_title.png",
         cover:  true
+    },
+    {
+        name:   "Image 01",
+        url:    "/images/weRead_title.png",
+        cover:  false
+    },
+    {
+        name:   "Image 02",
+        url:    "/images/weRead_title.png",
+        cover:  false
+    },
+    {
+        name:   "Image 03",
+        url:    "/images/weRead_title.png",
+        cover:  false
+    },
+    {
+        name:   "Unrelated",
+        url:    "/images/weRead_title.png",
+        cover:  false
     }
 ]
 

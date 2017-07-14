@@ -31,13 +31,20 @@ const seedProjects = function(){
                         console.log(error)
                     } else {
                         console.log("Created " + returnedProject.title)
-                        Image.find({name: "Title Page"}, function(error, returnedImage){
+                        Image.find({ $or: [ { name:  "Title Page"  }, 
+                                            { name: "Image 01" },
+                                            { name: "Image 02" },
+                                            { name: "Image 03" }
+                                        ] }, function(error, returnedImages){
                             if(error){
                                 console.log(error)
                             } else {
-                                console.log("Added " + returnedImage[0].name + " to " + returnedProject.title)
-                                returnedProject.images.push(returnedImage[0])
-                                returnedProject.save()
+                                console.log(returnedImages)
+                                returnedImages.forEach(function(image){
+                                    console.log("Added " + image.name + " to " + returnedProject.title)
+                                    returnedProject.images.push(image)
+                                    returnedProject.save()
+                                })
                             }
                         })
                     }

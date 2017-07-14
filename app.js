@@ -24,7 +24,7 @@ app.use(express.static(__dirname + "/assets"))
 // SEEDS
 // seedImages()
 // seedProjects()
-// seedCategories()
+seedCategories()
 mongoose.Promise = global.Promise
 mongoose.connect("mongodb://localhost/portfolio")
 
@@ -50,6 +50,13 @@ app.get("/portfolio", function(request, response){
 })
 
 //  - Show
+app.get("/portfolio/:id", function(request, response){
+    Project.find({_id: request.params.id}, function(error, returnedProject){
+        response.send(returnedProject)
+    })
+    
+})
+
 
 //  - New
 
