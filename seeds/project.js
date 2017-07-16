@@ -20,18 +20,17 @@ var myProjects = [
 const seedProjects = function(){
     
     // Remove all projects
-    Project.remove({}, function(error){
+    Project.remove({title: "weRead"}, function(error){
         if(error){
             console.log(error)
         } else {
-            console.log("Removed all projects...")
             myProjects.forEach(function(project){
                 Project.create(project, function(error, returnedProject){
                     if(error){
                         console.log(error)
                     } else {
                         console.log("Created " + returnedProject.title)
-                        Image.find({ $or: [ { name:  "Title Page"  }, 
+                        Image.find({ $or: [ { name: "Title Page" }, 
                                             { name: "Image 01" },
                                             { name: "Image 02" },
                                             { name: "Image 03" }
@@ -39,13 +38,11 @@ const seedProjects = function(){
                             if(error){
                                 console.log(error)
                             } else {
-                                console.log(returnedImages)
                                 returnedImages.forEach(function(image){
-                                    console.log("Added " + image.name + " to " + returnedProject.title)
                                     returnedProject.images.push(image)
-                                    returnedProject.save()
                                 })
                             }
+                            returnedProject.save()
                         })
                     }
                 })
