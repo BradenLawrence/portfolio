@@ -51,10 +51,9 @@ app.get("/portfolio", function(request, response){
 
 //  - Show
 app.get("/portfolio/:id", function(request, response){
-    Project.find({_id: request.params.id}, function(error, returnedProject){
-        response.render("show")
+    Project.findOne({_id: request.params.id}).populate("images").exec(function(error, returnedProject){
+        response.render("show", {project: returnedProject})
     })
-    
 })
 
 
