@@ -20,6 +20,7 @@ var Category    = require("./models/category.js"),
 // GENERAL APP SETTINGS
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + "/assets"))
+app.use(express.static(__dirname + "/node_modules"))
 
 // SEEDS
 // seedImages()

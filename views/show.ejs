@@ -2,6 +2,9 @@
     <head>
         <title>Braden Lawrence</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css">
+        <!--<link href="https://jeffry.in/old-jeffry-in/css/jeffry.in.css" rel="stylesheet" />-->
+        <!--<link href="https://jeffry.in/old-jeffry-in/css/jeffry.in.slider.css" rel="stylesheet" />-->
+        <link rel="stylesheet" type="text/css" href="/css/slider.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
     </head>
 
@@ -16,28 +19,17 @@
       </a>
     </div>
 
-    <div class="ui segments">
+<div class="ui segments">
         <div class="ui segment">
-          <img class="ui centered large image" src="<%= project.images[0].url %>">
-              <div class="ui left internal rail">
-                <div class="ui segment">
-                  &lt;
-                </div>
-              </div>
-              <div class="ui right internal rail">
-                <div class="ui segment">
-                  &gt;
-                </div>
-              </div>
-        </div>
-        <div class="ui segment">
-            <div class="ui equal width grid">
-                <% project.images.forEach(function(image){ %>
-                <div class="column">
-                    <img class="ui tiny centered image" src="<%= image.url %>">
-                </div>
-                <% }) %>
-            </div>
+            <div class="slider">
+            <div class="slides">
+            <% project.images.forEach(function(image){ %>
+                <div class="slide-item ">
+                  <img class="ui centered large image" src="<%= image.url %>">
+                 </div>
+             <% }) %> 
+             </div>
+             </div>
         </div>
         <div class="ui segment">
             <h3 class="ui header"><%= project.title %></h3>
@@ -54,5 +46,16 @@
             </p>
         </div>
     </div>
-
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
+<script>
+    $('.slider').glide({
+  autoplay: false,
+  arrowsWrapperClass: 'slider-arrows',
+  arrowRightText: '',
+  arrowLeftText: ''
+});
+</script>
