@@ -71,7 +71,6 @@
   border-radius:50%;
 }
 .slider-arrow--right, .slider-arrow--left {
-  /*background-image: url('/images/glide-arrows.png');*/
   background-position: center;
   background-repeat:no-repeat;
   width: 17px;
