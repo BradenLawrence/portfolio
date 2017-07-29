@@ -5,13 +5,23 @@ var mongoose    = require("mongoose"),
 var myCategories = [
     {
         name:   "UX Design"
+    },
+    {
+        name:   "Graphic Design"
+    },
+    {
+        name:   "Web Development"
     }
 ]
 
 const seedCategories = function(){
     
-    // Remove all projects
-    Category.remove({}, function(error){
+    // Remove all categories
+    Category.remove({ $or: [
+            {name: "UX Design"},
+            {name: "Graphic Design"},
+            {name: "Web Development"}
+        ] }, function(error){
         if(error){
             console.log(error)
         } else {
@@ -22,15 +32,6 @@ const seedCategories = function(){
                         console.log(error)
                     } else {
                         console.log("Created " + returnedCategory.name)
-                        Project.find({title: "weRead"}, function(error, returnedProject){
-                            if(error){
-                                console.log(error)
-                            } else {
-                                console.log("Added " + returnedProject[0].title + " to " + returnedCategory.name)
-                                returnedCategory.projects.push(returnedProject[0])
-                                returnedCategory.save()
-                            }
-                        })
                     }
                 })
             })

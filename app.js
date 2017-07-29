@@ -4,9 +4,11 @@ var express     = require("express"),
     mongoose    = require("mongoose")
     
 // SEEDS
-var seedImages      = require("./seeds/image"),
-    seedProjects    = require("./seeds/project"),
-    seedCategories  = require("./seeds/category")
+var seedImages              = require("./seeds/image"),
+    seedProjects            = require("./seeds/project"),
+    seedProjectImages       = require("./seeds/projectImages"),
+    seedCategories          = require("./seeds/category"),
+    seedCategoryProjects    = require("./seeds/categoryProjects")
     
 // MONGOOSE SETTINGS
 mongoose.Promise = global.Promise
@@ -23,9 +25,11 @@ app.use(express.static(__dirname + "/assets"))
 app.use(express.static(__dirname + "/node_modules"))
 
 // SEEDS
-seedImages()
+// seedImages()
 // seedProjects()
+// seedProjectImages()
 // seedCategories()
+// seedCategoryProjects()
 mongoose.Promise = global.Promise
 mongoose.connect("mongodb://localhost/portfolio")
 

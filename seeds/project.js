@@ -13,14 +13,67 @@ var myProjects = [
                         "Axure",
                         "InVision"
             ],
-        links:          "http://www.placeholder.com"
+        links:          "http://www.placeholder.com",
+        images: []
+    },
+    {
+        title:          "Spark",
+        date:           "Mon, 30 Jun 2014 03:10:00 +0000",
+        description:    "Placeholder description",
+        client:         "Safelight Security",
+        media:  [
+                        "Adobe Illustrator",
+            ]
+    },
+    {
+        title:          "Mobile Bay",
+        date:           "Fri, 18 Jan 2013 17:31:00 +0000",
+        description:    "Placeholder description",
+        client:         "Safelight Security",
+        media:  [
+                        "Adobe Illustrator",
+            ]
+    },
+    {
+        title:          "Phases of the Moon",
+        date:           "Tue, 22 Nov 2016 18:49:00 +0000",
+        description:    "Placeholder description",
+        client:         "Project Lead The Way",
+        media:  [
+                        "Adobe Illustrator",
+                        "Adobe InDesign"
+            ]
+    },
+    {
+        title:          "Camp Space",
+        date:           "Thu, 08 Jun 2017 19:18:00 +0000",
+        description:    "Placeholder description",
+        media:  [
+                        "Node.js",
+                        "Express",
+                        "Mongo DB"
+            ]
+    },
+    {
+        title:          "Color Game",
+        date:           "Mon, 13 Feb 2017 03:55:00 +0000",
+        description:    "Placeholder description",
+        media:  [
+                        "vanilla javaScript",
+            ]
     }
 ]
 
 const seedProjects = function(){
     
     // Remove all projects
-    Project.remove({title: "weRead"}, function(error){
+    Project.remove({ $or: [ { title: "weRead" }, 
+                            { title: "Spark" },
+                            { title: "Mobile Bay" },
+                            { title: "Phases of the Moon" },
+                            { title: "Camp Space" },
+                            { title: "Color Game" }
+                        ] }, function(error){
         if(error){
             console.log(error)
         } else {
@@ -30,20 +83,7 @@ const seedProjects = function(){
                         console.log(error)
                     } else {
                         console.log("Created " + returnedProject.title)
-                        Image.find({ $or: [ { name: "Title Page" }, 
-                                            { name: "Image 01" },
-                                            { name: "Image 02" },
-                                            { name: "Image 03" }
-                                        ] }, function(error, returnedImages){
-                            if(error){
-                                console.log(error)
-                            } else {
-                                returnedImages.forEach(function(image){
-                                    returnedProject.images.push(image)
-                                })
-                            }
-                            returnedProject.save()
-                        })
+                        
                     }
                 })
             })
