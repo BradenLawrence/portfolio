@@ -3,7 +3,7 @@ var mongoose    = require("mongoose"),
     Image       = require("../models/image")        
             
 const seedProjectImages = function(){           
-            // Add images to weRead
+            // Add images to projects
             Project.findOne({title: "weRead"}, function(error, weRead){
                 if(error) {
                     console.log(error)
@@ -77,7 +77,7 @@ const seedProjectImages = function(){
                 if(error) {
                     console.log(error)
                 } else {
-                    Image.find({ $or: [ { name: "Earth" }, 
+                    Image.find({ $or: [ { name: "Moon" }, 
                                         { name: "Phases of the Moon" }
                                     ] }, function(error, returnedImages){
                         if(error){

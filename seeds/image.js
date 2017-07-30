@@ -51,7 +51,7 @@ var myImages = [
     // Spark
     {
         name:   "Spark Course Menu",
-        url:    "/images/spark/Home - Student - Course Complete.png",
+        url:    "/images/spark/Home - Student – Passed.png",
         cover:  true
     },
     {
@@ -62,11 +62,6 @@ var myImages = [
     {
         name:   "Course Complete",
         url:    "/images/spark/Home - Student - Course Complete.png",
-        cover:  false
-    },
-    {
-        name:   "Manager View",
-        url:    "/images/spark/17 Home - Staff Manager.png",
         cover:  false
     },
     {
@@ -90,15 +85,10 @@ var myImages = [
         url:    "/images/mobileBay/MobileSecurity_Infographic_Bot.png",
         cover:  false
     },
+    // Phases of the Moon
     {
-        name:   "Mobile Bay - Full",
-        url:    "/images/mobileBay/MobileSecurity_Infographic_Full.png",
-        cover:  false
-    },
-    // Sun, Moon, Stars
-    {
-        name:   "Earth",
-        url:    "/images/sunMoonStars/earth.png",
+        name:   "Moon",
+        url:    "/images/sunMoonStars/moon.png",
         cover:  true
     },
     {
