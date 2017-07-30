@@ -78,16 +78,17 @@
   display: block;
   padding: 0;
   padding: 60px 15px;
-  background-color: #7f7f7f;
-  opacity: .25;
+  background-color: #222222;
   border: 1px solid rgba(34, 36, 38, 0.15);
   box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-  border-radius: 0.28571429rem;
+  border-radius: 0.2rem;
 }
 .slider-arrow--right {
     background-image: url('/images/glide-arrow-right.png');
+    margin-right: -45px;
 }
 .slider-arrow--left {
     background-image: url('/images/glide-arrow-left.png');
+    margin-left: -45px;
 }
 
