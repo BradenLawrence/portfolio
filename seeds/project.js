@@ -13,8 +13,7 @@ var myProjects = [
                         "Axure",
                         "InVision"
             ],
-        links:          "http://www.placeholder.com",
-        images: []
+        links:          "http://www.placeholder.com"
     },
     {
         title:          "Spark",

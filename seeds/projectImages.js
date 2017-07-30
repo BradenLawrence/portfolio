@@ -24,8 +24,15 @@ const seedProjectImages = function(){
                             returnedImages.forEach(function(image){
                                 weRead.images.push(image)
                             })
+                            Image.findOne({ name: "Title Page" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    weRead.cover = coverImage
+                                    weRead.save()
+                                }
+                            })
                         }
-                        weRead.save()
                     })
                 }
             })
@@ -46,8 +53,15 @@ const seedProjectImages = function(){
                             returnedImages.forEach(function(image){
                                 spark.images.push(image)
                             })
+                            Image.findOne({ name: "Spark Course Menu" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    spark.cover = coverImage
+                                    spark.save()
+                                }
+                            })
                         }
-                        spark.save()
                     })
                 }
             })
@@ -67,8 +81,15 @@ const seedProjectImages = function(){
                             returnedImages.forEach(function(image){
                                 mobileBay.images.push(image)
                             })
+                            Image.findOne({ name: "Mobile Bay - Title" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    mobileBay.cover = coverImage
+                                    mobileBay.save()
+                                }
+                            })
                         }
-                        mobileBay.save()
                     })
                 }
             })
@@ -77,7 +98,7 @@ const seedProjectImages = function(){
                 if(error) {
                     console.log(error)
                 } else {
-                    Image.find({ $or: [ { name: "Moon" }, 
+                    Image.find({ $or: [ { name: "Earth" }, 
                                         { name: "Phases of the Moon" }
                                     ] }, function(error, returnedImages){
                         if(error){
@@ -86,8 +107,15 @@ const seedProjectImages = function(){
                             returnedImages.forEach(function(image){
                                 phasesOfTheMoon.images.push(image)
                             })
+                            Image.findOne({ name: "Moon" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    phasesOfTheMoon.cover = coverImage
+                                    phasesOfTheMoon.save()
+                                }
+                            })
                         }
-                        phasesOfTheMoon.save()
                     })
                 }
             })
@@ -96,6 +124,14 @@ const seedProjectImages = function(){
                 if(error) {
                     console.log(error)
                 } else {
+                    Image.findOne({ name: "Title" }, function(error, coverImage){
+                        if(error) {
+                            console.log(error)
+                        } else {
+                            campSpace.cover = coverImage
+                        }
+                        campSpace.save()
+                    })
                     Image.find({ $or: [ { name: "Title" }, 
                                         { name: "Landing Sites" },
                                         { name: "Site Details" },
@@ -107,8 +143,15 @@ const seedProjectImages = function(){
                             returnedImages.forEach(function(image){
                                 campSpace.images.push(image)
                             })
+                            Image.findOne({ name: "Title" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    campSpace.cover = coverImage
+                                    campSpace.save()
+                                }
+                            })
                         }
-                        campSpace.save()
                     })
                 }
             })
@@ -127,8 +170,15 @@ const seedProjectImages = function(){
                             returnedImages.forEach(function(image){
                                 colorGame.images.push(image)
                             })
+                            Image.findOne({ name: "Color Game" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    colorGame.cover = coverImage
+                                    colorGame.save()
+                                }
+                            })
                         }
-                        colorGame.save()
                     })
                 }
             })

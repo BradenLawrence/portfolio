@@ -44,7 +44,7 @@ app.get("/", function(request, response){
 app.get("/portfolio", function(request, response){
     Category.find({}).populate({
         path:       "projects",
-        populate:   {path: "images"}
+        populate:   {path: "cover"}
         }).exec(function(error, returnedCategories){
         if(error){
             console.log(error)

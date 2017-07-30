@@ -4,6 +4,10 @@ var mongoose = require("mongoose"),
 var projectSchema = new mongoose.Schema({
     title:  String,
     date:   Date,
+    cover:  {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Image"
+    },
     images: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -13,7 +17,7 @@ var projectSchema = new mongoose.Schema({
     description:    String,
     client: String,
     media:  [String],
-    links:  String
+    links:  String,
     
 })
 
