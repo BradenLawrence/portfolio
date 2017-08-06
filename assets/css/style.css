@@ -3,12 +3,32 @@ body {
     background-color: #f0f0f3;
 }
 
+.ui.menu:first-child {
+    max-height: 15px;
+    margin-bottom: 70px;
+    border-radius: 0 0 0.285714rem 0.285714rem;
+}
+
 .ui.segment > .meta {
     margin-bottom: 0.6em;
     max-width: auto;
     font-size: 1em;
     line-height: 1.4285em;
     color: rgba(0, 0, 0, 0.5);
+}
+
+.logoFrame {
+    background-color: #222222;
+    padding: 78px 8px 10px 10px;
+    border-radius: 0 0 0.285714rem 0.285714rem;
+}
+
+.logoFrame > img {
+    max-width: 40px;
+}
+
+.ui.menu .header.item:before {
+    width: 0;
 }
 
 @media only screen and (min-width: 1200px) {
