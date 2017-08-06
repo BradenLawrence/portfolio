@@ -1,22 +1,4 @@
-<html>
-    <head>
-        <title>Braden Lawrence</title>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-    </head>
-
-<div class="ui container">
-  
-    <div class="ui menu">
-      <div class="header item">
-        <div class="logoFrame" id="logoFrame">
-          <img id="logo" src="/images/logo.svg" width="40px">
-        </div>
-      </div>
-      <a class="item right">
-        Contact
-      </a>
-    </div>
+<% include partials/header %>
 
     <% categories.forEach(function(category) { %>
     
@@ -55,8 +37,7 @@
     
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
+<% include partials/standardScripts %>
 <script>
 $(document).ready(function(){
   $('#logoFrame').transition('hide')
@@ -68,3 +49,5 @@ $(document).ready(function(){
   ;
 })
 </script>
+
+<% include partials/footer %>

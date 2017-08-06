@@ -1,6 +1,7 @@
 body {
     background-image: url("/images/tileGrid.png");
     background-color: #f0f0f3;
+    overflow-y: scroll;
 }
 
 .ui.menu:first-child {
@@ -15,6 +16,10 @@ body {
     font-size: 1em;
     line-height: 1.4285em;
     color: rgba(0, 0, 0, 0.5);
+}
+
+.ui.segment:last-of-type {
+    margin-bottom: 60px;
 }
 
 .logoFrame {

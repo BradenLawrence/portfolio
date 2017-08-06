@@ -1,21 +1,4 @@
-<html>
-    <head>
-        <title>Braden Lawrence</title>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css">
-        <link rel="stylesheet" type="text/css" href="/css/slider.css">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-    </head>
-
-<div class="ui container">
-  
-    <div class="ui menu">
-      <div class="header item">
-        Braden Lawrence
-      </div>
-      <a class="item">
-        Contact
-      </a>
-    </div>
+<% include partials/header %>
 
 <div class="ui segments" id="sliderFrame">
     <div class="slider">
@@ -50,16 +33,17 @@
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
+
+<% include partials/standardScripts %>
 <script src="/js/glide.js"></script>
 <script>
-var description = $("#description")
-var slider = $('.slider').glide({
-  autoplay: false,
-  arrowsWrapperClass: 'slider-arrows',
-  arrows: '#sliderFrame',
-  arrowRightText: '',
-  arrowLeftText: ''
-})
+    var description = $("#description")
+    var slider = $('.slider').glide({
+      autoplay: false,
+      arrowsWrapperClass: 'slider-arrows',
+      arrows: '#sliderFrame',
+      arrowRightText: '',
+      arrowLeftText: ''
+    })
 </script>
+<% include partials/footer %>
