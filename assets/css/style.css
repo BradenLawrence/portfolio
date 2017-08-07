@@ -5,8 +5,8 @@ body {
 }
 
 .ui.menu:first-child {
-    max-height: 15px;
-    margin-bottom: 70px;
+    height: 20px;
+    margin-bottom: 45px;
     border-radius: 0 0 0.285714rem 0.285714rem;
 }
 
@@ -18,13 +18,17 @@ body {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.ui.segment {
+    margin-bottom: 55px;
+}
+
 .ui.segment:last-of-type {
     margin-bottom: 60px;
 }
 
 .logoFrame {
     background-color: #222222;
-    padding: 78px 8px 10px 10px;
+    padding: 38px 8px 10px 10px;
     border-radius: 0 0 0.285714rem 0.285714rem;
 }
 
@@ -35,6 +39,20 @@ body {
 .ui.menu .header.item:before {
     width: 0;
 }
+
+.segmentHeader {
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 0.285714rem;
+}
+
+.segmentHeader > .ui.header {
+    color: #ffffff;
+}
+
 
 @media only screen and (min-width: 1200px) {
     .ui.container {
