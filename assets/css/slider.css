@@ -41,7 +41,7 @@
 
 .slider-nav {
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
 }
 
 .slider-nav__item {
@@ -112,5 +112,5 @@
 }
 
 .slide-item > .ui.segments > .ui.segment:last-child {  /* Select the slide's description box */
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }

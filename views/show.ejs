@@ -18,10 +18,11 @@
             <% }) %> 
          </div>
     </div>
-    <div class="ui segment">
-        
-    </div>
+    
 </div>
+    <% if(project.link) { %>
+        <a href="<%= project.link %>" target=blank><div class="projectLink"><h4 class="ui header">Open project</h4></div></a>
+    <% } %>
 
 </div>
 

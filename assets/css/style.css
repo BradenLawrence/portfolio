@@ -50,8 +50,22 @@ body {
     z-index: 1;
 }
 
-.segmentHeader > .ui.header {
+.segmentHeader > .ui.header,
+.projectLink > .ui.header {
     color: #ffffff;
+}
+
+.projectLink {
+    position: relative;
+    background-color: #222222;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 0.15rem;
+    z-index: 9999;
+    width: 75%;
+    text-align: center;
 }
 
 .ui.items {
