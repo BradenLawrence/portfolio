@@ -15,7 +15,6 @@
             <div class="content">
               <a class="header" href="/portfolio/<%= project._id %>"><%= project.title %></a>
               <div class="meta">
-                <span class="client"><%= project.client %></span>
                 <span class="media">
                   <% project.media.forEach(function(mediaType) { %>
                     <% if(project.media.indexOf(mediaType) < (project.media.length-1)) { %>
@@ -27,7 +26,7 @@
                 </span>
               </div>
               <div class="description">
-                <p><%= project.description %></p>
+                <p><%- project.description %></p>
               </div>
             </div>
           </div>
