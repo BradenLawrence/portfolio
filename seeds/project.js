@@ -13,7 +13,7 @@ var myProjects = [
                         "Axure",
                         "InVision"
             ],
-        link:          "projects/BradenLawrence_weRead.pdf"
+        link:          "/projects/BradenLawrence_weRead.pdf"
     },
     {
         title:          "Spark",
@@ -32,7 +32,7 @@ var myProjects = [
         media:  [
                         "Adobe Illustrator",
             ],
-        link:           "projects/BradenLawrence_MobileBay.png"
+        link:           "/projects/BradenLawrence_MobileBay.png"
     },
     {
         title:          "Phases of the Moon",
@@ -43,7 +43,7 @@ var myProjects = [
                         "Adobe Illustrator",
                         "Adobe InDesign"
             ],
-        link:           "projects/BradenLawrence_PatternsOfTheMoon.pdf"
+        link:           "/projects/BradenLawrence_PatternsOfTheMoon.png"
     },
     {
         title:          "Camp Space",
