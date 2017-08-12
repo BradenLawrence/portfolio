@@ -8,14 +8,12 @@ const seedProjectImages = function(){
                 if(error) {
                     console.log(error)
                 } else {
-                    Image.find({ $or: [ { name: "Title Page" }, 
-                                        { name: "Home Screen" },
+                    Image.find({ $or: [ { name: "Home Screen" },
                                         { name: "Class Screen" },
                                         { name: "Chat Groups" },
                                         { name: "Overtime Screen" },
                                         { name: "Site Map" },
                                         { name: "Flow Chart" },
-                                        { name: "User Goals" },
                                         { name: "User Profile" }
                                     ] }, function(error, returnedImages){
                         if(error){
