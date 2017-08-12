@@ -3,7 +3,7 @@
     <% categories.forEach(function(category) { %>
     
     <div class="ui segment">
-      <div class="segmentHeader right"><h3 class="ui header"><%= category.name %></h3></div>
+      <div class="segmentHeader"><h3 class="ui header"><%= category.name %></h3></div>
       <div class="ui items">
         
         <% category.projects.forEach(function(project) { %>
@@ -18,7 +18,11 @@
                 <span class="client"><%= project.client %></span>
                 <span class="media">
                   <% project.media.forEach(function(mediaType) { %>
-                    <%= mediaType %>, 
+                    <% if(project.media.indexOf(mediaType) < (project.media.length-1)) { %>
+                      <%= mediaType %>, 
+                    <% } else { %>
+                      <%= mediaType %>
+                    <% } %>
                   <% }) %>
                 </span>
               </div>
