@@ -13,7 +13,7 @@ var myProjects = [
                         "Axure",
                         "InVision"
             ],
-        links:          "http://www.placeholder.com"
+        link:          "projects/BradenLawrence_weRead.pdf"
     },
     {
         title:          "Spark",
@@ -31,7 +31,8 @@ var myProjects = [
         client:         "Safelight Security",
         media:  [
                         "Adobe Illustrator",
-            ]
+            ],
+        link:           "projects/BradenLawrence_MobileBay.png"
     },
     {
         title:          "Phases of the Moon",
@@ -41,7 +42,8 @@ var myProjects = [
         media:  [
                         "Adobe Illustrator",
                         "Adobe InDesign"
-            ]
+            ],
+        link:           "projects/BradenLawrence_PatternsOfTheMoon.pdf"
     },
     {
         title:          "Camp Space",
@@ -51,7 +53,8 @@ var myProjects = [
                         "Node.js",
                         "Express",
                         "Mongo DB"
-            ]
+            ],
+        link:           "https://pure-hollows-41225.herokuapp.com/"
     },
     {
         title:          "Color Game",
@@ -59,7 +62,8 @@ var myProjects = [
         description:    "This is a quick game made in javaScript to teach people how to read colors shown in rgb. In each round, you are given an rgb code, and six boxes, one of which matches the code.",
         media:  [
                         "vanilla javaScript",
-            ]
+            ],
+        link:           "https://bradenlawrence.github.io/colorGame/"
     }
 ]
 
