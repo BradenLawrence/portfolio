@@ -5,9 +5,9 @@ body {
 }
 
 .ui.menu:first-child {
-    height: 20px;
+    height: 38px;
     margin-bottom: 45px;
-    border-radius: 0 0 0.285714rem 0.285714rem;
+    border-radius: 0 0 0.15rem 0.15rem;
 }
 
 .ui.segment > .meta {
@@ -19,7 +19,7 @@ body {
 }
 
 .ui.segment {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 .ui.segment:last-of-type {
@@ -29,7 +29,7 @@ body {
 .logoFrame {
     background-color: #222222;
     padding: 38px 8px 10px 10px;
-    border-radius: 0 0 0.285714rem 0.285714rem;
+    border-radius: 0 0 0.15rem 0.15rem;
 }
 
 .logoFrame > img {
@@ -46,11 +46,15 @@ body {
     top: -25px;
     background-color: #222222;
     padding: 10px;
-    border-radius: 0.285714rem;
+    border-radius: 0.15rem;
 }
 
 .segmentHeader > .ui.header {
     color: #ffffff;
+}
+
+.ui.items {
+    margin-bottom: 200px;
 }
 
 
