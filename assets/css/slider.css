@@ -6,6 +6,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
 .slides {
@@ -39,7 +40,7 @@
 
 .slider-nav {
   position: absolute;
-  bottom: 42px;
+  bottom: 10px;
 }
 
 .slider-nav__item {
@@ -107,4 +108,8 @@
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
+}
+
+.slide-item > .ui.segments > .ui.segment:last-child {  /* Select the slide's description box */
+  padding-bottom: 30px;
 }
