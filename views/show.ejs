@@ -1,6 +1,7 @@
 <% include partials/header %>
 
 <div class="ui segments" id="sliderFrame">
+    <div class="segmentHeader"><h3 class="ui header"><%= project.title %></h3></div>
     <div class="slider">
         <div class="slides">
             <% project.images.forEach(function(image){ %>
@@ -9,7 +10,7 @@
                         <div class="ui segment">
                             <img class="ui centered big image" src="<%= image.url %>">
                         </div>
-                        <div class="ui segment description">
+                        <div class="ui segment">
                             <p><%- image.description %></p>
                         </div>
                     </div>
@@ -18,16 +19,7 @@
          </div>
     </div>
     <div class="ui segment">
-        <h3 class="ui header"><%= project.title %></h3>
-        <div class="meta">
-            <span class="client"><%= project.client %></span>
-            <span class="media">
-              <% project.media.forEach(function(mediaType) { %>
-                <%= mediaType %>, 
-              <% }) %>
-            </span>
-        </div>
-        <p><%- project.description  %></p>
+        
     </div>
 </div>
 

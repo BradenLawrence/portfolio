@@ -47,6 +47,7 @@ body {
     background-color: #222222;
     padding: 10px;
     border-radius: 0.15rem;
+    z-index: 1;
 }
 
 .segmentHeader > .ui.header {
