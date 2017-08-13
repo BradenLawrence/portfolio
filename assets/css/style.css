@@ -75,21 +75,21 @@ body {
 
 @media only screen and (min-width: 1200px) {
     .ui.container {
-        width: 700px;
+        width: 800px;
     }
 
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
     .ui.container {
-        width: 600px;
+        width: 700px;
     }
 
 }
 
 @media only screen and (max-width: 991px) and (min-width: 768px){
     .ui.container {
-        width: 500px;
+        width: 600px;
     }
 
 }
