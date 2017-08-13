@@ -4,14 +4,17 @@ var mongoose    = require("mongoose"),
 
 var myCategories = [
     {
-        name:   "UX Design"
+        name:   "Web Development",
+        sort:   1
     },
     {
-        name:   "Graphic Design"
+        name:   "UX Design",
+        sort:   2
     },
     {
-        name:   "Web Development"
-    }
+        name:   "Graphic Design",
+        sort:   3
+    },
 ]
 
 const seedCategories = function(){

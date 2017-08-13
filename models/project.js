@@ -18,6 +18,7 @@ var projectSchema = new mongoose.Schema({
     client:         String,
     media:          [String],
     link:           String,
+    sort:           Number
     
 })
 

@@ -4,6 +4,26 @@ var mongoose    = require("mongoose"),
 
 var myProjects = [
     {
+        title:          "Camp Space",
+        date:           "Thu, 08 Jun 2017 19:18:00 +0000",
+        description:    "A guide to the many places mankind has reached throughout history, Camp Space is a website designed using Node.js as part of a web development course through Udemy. The process of building it covered RESTful routing, database driven content, authentication, and user created content.",
+        media:  [
+                        "Node.js",
+                        "Express",
+                        "Mongo DB"
+            ],
+        link:           "https://pure-hollows-41225.herokuapp.com/"
+    },
+    {
+        title:          "Color Game",
+        date:           "Mon, 13 Feb 2017 03:55:00 +0000",
+        description:    "This is a quick game made in javaScript to teach people how to read colors shown in rgb. In each round, you are given an rgb code, and six boxes, one of which matches the code.",
+        media:  [
+                        "vanilla javaScript",
+            ],
+        link:           "https://bradenlawrence.github.io/colorGame/"
+    },
+    {
         title:          "weRead",
         date:           "Mon, 05 Oct 2015 12:26:41 +0000",
         description:    "Made to demonstrate the UX methodology, weRead is a prototype for a learning management system that allows online classes to be taught in a way that is similar to in-person classes. I began with a series of interviews with teachers and students who have used online classes in the past. From those interviews, I created user profiles, pain points, and workflows that informed the design of the clickable prototype.",
@@ -45,26 +65,6 @@ var myProjects = [
             ],
         link:           "/projects/BradenLawrence_PatternsOfTheMoon.png"
     },
-    {
-        title:          "Camp Space",
-        date:           "Thu, 08 Jun 2017 19:18:00 +0000",
-        description:    "A guide to the many places mankind has reached throughout history, Camp Space is a website designed using Node.js as part of a web development course through Udemy. The process of building it covered RESTful routing, database driven content, authentication, and user created content.",
-        media:  [
-                        "Node.js",
-                        "Express",
-                        "Mongo DB"
-            ],
-        link:           "https://pure-hollows-41225.herokuapp.com/"
-    },
-    {
-        title:          "Color Game",
-        date:           "Mon, 13 Feb 2017 03:55:00 +0000",
-        description:    "This is a quick game made in javaScript to teach people how to read colors shown in rgb. In each round, you are given an rgb code, and six boxes, one of which matches the code.",
-        media:  [
-                        "vanilla javaScript",
-            ],
-        link:           "https://bradenlawrence.github.io/colorGame/"
-    }
 ]
 
 const seedProjects = function(){

@@ -49,6 +49,11 @@ app.get("/portfolio", function(request, response){
         if(error){
             console.log(error)
         } else {
+            // Categories have a sort "value" that determines the order they should go in
+            // This compare function makes sure they appear in the correct order, regardless of the order that exists in the DB
+            returnedCategories.sort(function(a,b){
+                return a.sort > b.sort 
+            })
             response.render("index", {categories: returnedCategories})
         }
     })
@@ -57,6 +62,10 @@ app.get("/portfolio", function(request, response){
 //  - Show
 app.get("/portfolio/:id", function(request, response){
     Project.findOne({_id: request.params.id}).populate("images").exec(function(error, returnedProject){
+        returnedProject.images.sort(function(a,b){
+            // Same as above, but for images
+            return a.sort > b.sort
+        })
         response.render("show", {project: returnedProject})
     })
 })

@@ -8,7 +8,8 @@ var categorySchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Project"
         }
-    ]
+    ],
+    sort:   Number
 })
 
 module.exports = mongoose.model("Category", categorySchema)

@@ -96,8 +96,7 @@ const seedProjectImages = function(){
                 if(error) {
                     console.log(error)
                 } else {
-                    Image.find({ $or: [ { name: "Earth" }, 
-                                        { name: "Phases of the Moon" }
+                    Image.find({ $or: [ { name: "Phases of the Moon" }
                                     ] }, function(error, returnedImages){
                         if(error){
                             console.log(error)
@@ -122,14 +121,6 @@ const seedProjectImages = function(){
                 if(error) {
                     console.log(error)
                 } else {
-                    Image.findOne({ name: "Title" }, function(error, coverImage){
-                        if(error) {
-                            console.log(error)
-                        } else {
-                            campSpace.cover = coverImage
-                        }
-                        campSpace.save()
-                    })
                     Image.find({ $or: [ { name: "Title" }, 
                                         { name: "Landing Sites" },
                                         { name: "Site Details" },
