@@ -4,9 +4,20 @@ body {
     overflow-y: scroll;
 }
 
+h1.ui.header {
+    margin: 8px 15px 50px 0;
+}
+
+h1.ui.header .sub.header {
+    margin-right: -3px;
+    line-height: 1.48em;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: .625em;
+    text-align: left;
+}
+
 .ui.menu:first-child {
     height: 38px;
-    margin-bottom: 45px;
     border-radius: 0 0 0.15rem 0.15rem;
 }
 
