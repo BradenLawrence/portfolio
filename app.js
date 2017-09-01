@@ -31,7 +31,8 @@ app.use(express.static(__dirname + "/node_modules"))
 // seedCategories()
 // seedCategoryProjects()
 mongoose.Promise = global.Promise
-mongoose.connect("mongodb://localhost/portfolio")
+// mongoose.connect("mongodb://localhost/portfolio")
+mongoose.connect(process.env.DATABASEURL)
 
 
 // ROUTES
