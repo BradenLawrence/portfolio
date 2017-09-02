@@ -31,7 +31,7 @@ app.use(express.static(__dirname + "/node_modules"))
 // seedCategories()
 // seedCategoryProjects()
 mongoose.Promise = global.Promise
-mongoose.connect(process.env.DATABASEURL)
+mongoose.createConnection(process.env.DATABASEURL)
 
 
 // ROUTES
