@@ -4,15 +4,19 @@ body {
     overflow-y: scroll;
 }
 
+.ui.segments {
+    margin-top: 45px;
+}
+
 h1.ui.header {
-    margin: 8px 15px 50px 0;
+    margin: -5px 15px 38px 0;
+    font-size: 2.75em;
 }
 
 h1.ui.header .sub.header {
-    margin-right: -3px;
     line-height: 1.48em;
     color: rgba(0, 0, 0, 0.87);
-    font-size: .625em;
+    font-size: .45em;
     text-align: left;
 }
 
