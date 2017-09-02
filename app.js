@@ -25,14 +25,13 @@ app.use(express.static(__dirname + "/assets"))
 app.use(express.static(__dirname + "/node_modules"))
 
 // SEEDS
-// seedImages()
+seedImages()
 // seedProjects()
 // seedProjectImages()
 // seedCategories()
 // seedCategoryProjects()
 mongoose.Promise = global.Promise
-// mongoose.connect("mongodb://localhost/portfolio")
-mongoose.connect(process.env.DATABASEURL)
+mongoose.connect("mongodb://pasamonte:Hcibewmlisnyf?@ds115214.mlab.com:15214/blportfolio")
 
 
 // ROUTES
