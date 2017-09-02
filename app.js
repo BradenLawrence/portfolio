@@ -31,7 +31,7 @@ seedImages()
 // seedCategories()
 // seedCategoryProjects()
 mongoose.Promise = global.Promise
-mongoose.createConnection("mongodb://pasamonte:Hcibewmlisnyf?@ds115214.mlab.com:15214/blportfolio")
+// mongoose.createConnection("mongodb://pasamonte:Hcibewmlisnyf?@ds115214.mlab.com:15214/blportfolio")
 
 
 // ROUTES
