@@ -12,7 +12,6 @@ var seedImages              = require("./seeds/image"),
     
 // MONGOOSE SETTINGS
 mongoose.Promise = global.Promise
-console.log(process.env.DATABASEURL)
 mongoose.connect(process.env.DATABASEURL)
 
 // MODELS
@@ -26,7 +25,7 @@ app.use(express.static(__dirname + "/assets"))
 app.use(express.static(__dirname + "/node_modules"))
 
 // SEEDS
-// seedImages()
+seedImages()
 // seedProjects()
 // seedProjectImages()
 // seedCategories()
