@@ -12,7 +12,8 @@ var seedImages              = require("./seeds/image"),
     
 // MONGOOSE SETTINGS
 mongoose.Promise = global.Promise
-mongoose.connect("mongodb://localhost/portfolio")
+console.log(process.env.DATABASEURL)
+mongoose.connect(process.env.DATABASEURL)
 
 // MODELS
 var Category    = require("./models/category.js"),
@@ -30,8 +31,7 @@ app.use(express.static(__dirname + "/node_modules"))
 // seedProjectImages()
 // seedCategories()
 // seedCategoryProjects()
-mongoose.Promise = global.Promise
-mongoose.createConnection(process.env.DATABASEURL)
+
 
 
 // ROUTES
