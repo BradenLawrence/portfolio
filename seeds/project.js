@@ -4,6 +4,16 @@ var mongoose    = require("mongoose"),
 
 var myProjects = [
     {
+        title:          "Palette Picker",
+        date:           "Sun, 14 Oct 2017 22:00:00 +0000",
+        description:    "A spin on the Ember Super Rentals tutorial project. For this project, we go through each of the main features used in Ember: Components, Actions, Helpers, Controllers, Utilities, and Services. The metaphor starts to break down once we get to the map API, but eventually I'd like to add a component to select colors from a Photoshop style palette.",
+        media:  [
+                        "Node.js",
+                        "Ember.js"
+            ],
+        link:           "https://rocky-bayou-57966.herokuapp.com/palettes"
+    },
+    {
         title:          "Camp Space",
         date:           "Thu, 08 Jun 2017 19:18:00 +0000",
         description:    "A guide to the many places mankind has reached throughout history, Camp Space is a website designed using Node.js as part of a web development course through Udemy. The process of building it covered RESTful routing, database driven content, authentication, and user created content.",

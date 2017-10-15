@@ -3,7 +3,7 @@ var mongoose    = require("mongoose"),
     Image       = require("../models/image")        
             
 const seedProjectImages = function(){           
-            // Add images to projects
+            // Add images to weRead
             Project.findOne({title: "weRead"}, function(error, weRead){
                 if(error) {
                     console.log(error)
@@ -165,6 +165,36 @@ const seedProjectImages = function(){
                                 } else {
                                     colorGame.cover = coverImage
                                     colorGame.save()
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+            // Add images to Palette Picker
+            Project.findOne({title: "Palette Picker"}, function(error, palettePicker){
+                if(error) {
+                    console.log(error)
+                } else {
+                    Image.find({ $or: [ { name: "Palette Component List" }, 
+                                        { name: "Zoom Action and Category Helper" },
+                                        { name: "Filter Component" },
+                                        { name: "Map Utility and Service" },
+                                        { name: "Nested Show Route" },
+                                        { name: "Route Links" }
+                                    ] }, function(error, returnedImages){
+                        if(error){
+                            console.log(error)
+                        } else {
+                            returnedImages.forEach(function(image){
+                                palettePicker.images.push(image)
+                            })
+                            Image.findOne({ name: "Route Links" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    palettePicker.cover = coverImage
+                                    palettePicker.save()
                                 }
                             })
                         }

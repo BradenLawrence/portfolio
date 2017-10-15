@@ -48,6 +48,7 @@ const seedCategoryProjects = function(){
         } else {
             Project.find({ $or: [
                 { title: "Camp Space" }, 
+                { title: "Palette Picker" },
                 { title: "Color Game" }
             ] }, function(error, returnedProjects){
                 if(error){

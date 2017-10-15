@@ -151,7 +151,44 @@ var myImages = [
         url:    "/images/colorGame/Vertical.png",
         description:  "A vertical view for narrow screens.",
         sort:   3
-    }
+    },
+    // Palette Picker
+    {
+        name:   "Palette Component List",
+        url:    "/images/palettePicker/01_EmberQuickStart.png",
+        description:  "Step 1 is to create several example palettes that include a name, an image, and a few other properties. These are stored in a fake database tool called Mirage. The data for each of these palettes are loaded and displayed using a component called palette-frame.",
+        sort:   1
+    },
+    {
+        name:   "Zoom Action and Category Helper",
+        url:    "/images/palettePicker/02_EmberQuickStart.png",
+        description:  "Next we add a click handler action to each image. The action toggles an 'isWide' class on the image and enlarges the image based on our styles. We also add a helper to categorize the mood of our palettes. Here, we give the helper the mood listed on the palette and match it against a list of 'light' or 'dark' moods, and display them.",
+        sort:   2
+    },
+    {
+        name:   "Filter Component",
+        url:    "/images/palettePicker/03_EmberQuickStart.png",
+        description:  "After that we create a filter component to control which palettes get displayed. We first create an input, and on every keypress we use its value to make a call to our Mirage database. We then tell Mirage to take that value and filter it against our list of palettes.",
+        sort:   3
+    },
+    {
+        name:   "Map Utility and Service",
+        url:    "/images/palettePicker/04_EmberQuickStart.png",
+        description:  "You might be asking yourself, 'Gee, do palettes really need a map service?' and the answer is YES! Here we integrate the Google Maps api as a utility, and access it using a new location-map component. The new component takes the 'city' property of a palette and passes it to a map service we create. The api returns a map with our city pinned.",
+        sort:   4
+    },
+    {
+        name:   "Nested Show Route",
+        url:    "/images/palettePicker/05_EmberQuickStart.png",
+        description:  "The next step is to create a nested route for our palettes. To make this happen, we move our default palettes route into its nested 'index', then create a 'show' route for displaying further details. To build what it looks like, we take the ID from one of the palettes and find it in our Mirage database. The show route template can then show additional details from the palette.",
+        sort:   5
+    },
+    {
+        name:   "Route Links",
+        url:    "/images/palettePicker/06_EmberQuickStart.png",
+        description:  "Lastly, we add some links to the index route to call the show route using the ID of the palette you click on.",
+        sort:   6
+    },
 ]
 
 const seedImages = function(){
