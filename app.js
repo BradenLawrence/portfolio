@@ -26,7 +26,7 @@ app.use(express.static(__dirname + "/assets"))
 app.use(express.static(__dirname + "/node_modules"))
 
 // SEEDS
-// seedImages()
+seedImages()
 // seedProjects()
 // seedProjectImages()
 // seedCategories()
