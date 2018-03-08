@@ -14,6 +14,7 @@ var seedImages              = require("./seeds/image"),
 mongoose.Promise = global.Promise
 mongoose.connect(process.env.DATABASEURL)
 
+
 // MODELS
 var Category    = require("./models/category.js"),
     Project     = require("./models/project"),
@@ -30,8 +31,6 @@ app.use(express.static(__dirname + "/node_modules"))
 // seedProjectImages()
 // seedCategories()
 // seedCategoryProjects()
-
-
 
 // ROUTES
 //  - Home
@@ -81,6 +80,6 @@ app.get("/portfolio/:id", function(request, response){
 //  - Destroy
 
 //  - Listen
-app.listen(process.env.PORT, process.env.ID, function(){
+app.listen(process.env.PORT, function(){
     console.log("Portfolio site is running...")
 })

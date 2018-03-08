@@ -3,6 +3,34 @@ var mongoose    = require("mongoose"),
     Image       = require("../models/image")        
             
 const seedProjectImages = function(){           
+            // Add images to photowave
+            Project.findOne({title: "Photowave"}, function(error, Photowave){
+                if(error) {
+                    console.log(error)
+                } else {
+                    Image.find({ $or: [ { name: "Waiting for Video" },
+                                        { name: "Start Recording" },
+                                        { name: "Photobooth" },
+                                        { name: "Share Image" }
+                                    ] }, function(error, returnedImages){
+                        if(error){
+                            console.log(error)
+                        } else {
+                            returnedImages.forEach(function(image){
+                                Photowave.images.push(image)
+                            })
+                            Image.findOne({ name: "Vaporwave Background" }, function(error, coverImage){
+                                if(error) {
+                                    console.log(error)
+                                } else {
+                                    Photowave.cover = coverImage
+                                    Photowave.save()
+                                }
+                            })
+                        }
+                    })
+                }
+            })
             // Add images to weRead
             Project.findOne({title: "weRead"}, function(error, weRead){
                 if(error) {

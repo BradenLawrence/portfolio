@@ -189,6 +189,37 @@ var myImages = [
         description:  "Lastly, we add some links to the index route to call the show route using the ID of the palette you click on.",
         sort:   6
     },
+    // Photowave
+    {
+        name:   "Vaporwave Background",
+        url:    "/images/photowave/background_cover.png",
+        description:  "",
+        sort:   1
+    },
+    {
+        name:   "Waiting for Video",
+        url:    "/images/photowave/waiting.png",
+        description:  "When the page initially loads, it will automatically request a media stream from the user's camera. The video element then sets the media stream as its srcObject. If for some reason the auto-start fails, there is button to manually request the stream.",
+        sort:   2
+    },
+    {
+        name:   "Start Recording",
+        url:    "/images/photowave/recording.png",
+        description:  "When the stream state is active, the video element displays the current stream. The video scales with the page independantly from the size of the stream.",
+        sort:   3
+    },
+    {
+        name:   "Photobooth",
+        url:    "/images/photowave/countdown.png",
+        description:  "Once the user kicks things off, they see a countdown from 3, followed by a series of camera flashes. At each flash, the RecordImage action takes a screenshot from the video and draws it to a hidden canvas. Those canvas images are used to assemble an animated gif. The countdown and flashes both use the react-modal package in two different ways, depending on what props are passed to them.",
+        sort:   4
+    },
+    {
+        name:   "Share Image",
+        url:    "/images/photowave/download.png",
+        description:  "After the photobooth function takes 6 pictures, they are encoded together to make a dataURL for an animated gif, which is displayed in another modal window. From there, the user can download the gif, or click 'try again' to return to the photobooth.",
+        sort:   5
+    }
 ]
 
 const seedImages = function(){

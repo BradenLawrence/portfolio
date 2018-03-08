@@ -4,6 +4,17 @@ var mongoose    = require("mongoose"),
 
 var myProjects = [
     {
+        title:          "Photowave",
+        date:           "Fri, 02 Mar 2018 22:00:00 +0000",
+        description:    "I wanted to learn more about WebRTC, so I built this tool in React/Redux to take userMediaStream data and turn it into silly gifs with a cool 80s vaporwave theme. The user's stream is acquired using simple media constraints and a call to getUserMedia, then shown on the html video element. Screenshots are taken from the video and drawn to a canvas, which are then used to assemble a gif ready to download.",
+        media:  [
+                        "React",
+                        "Redux",
+                        "WebRTC"
+            ],
+        link:           "https://photowave.herokuapp.com"
+    },
+    {
         title:          "Palette Picker",
         date:           "Sun, 14 Oct 2017 22:00:00 +0000",
         description:    "A spin on the Ember Super Rentals tutorial project. For this project, we go through each of the main features used in Ember: Components, Actions, Helpers, Controllers, Utilities, and Services. The metaphor starts to break down once we get to the map API, but eventually I'd like to add a component to select colors from a Photoshop style palette.",
@@ -85,7 +96,9 @@ const seedProjects = function(){
                             { title: "Mobile Bay" },
                             { title: "Phases of the Moon" },
                             { title: "Camp Space" },
-                            { title: "Color Game" }
+                            { title: "Color Game" },
+                            { title: "Palette Picker" },
+                            { title: "Photowave" }
                         ] }, function(error){
         if(error){
             console.log(error)
