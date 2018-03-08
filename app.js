@@ -30,7 +30,7 @@ app.use(express.static(__dirname + "/node_modules"))
 // seedProjects()
 // seedProjectImages()
 // seedCategories()
-seedCategoryProjects()
+// seedCategoryProjects()
 
 // ROUTES
 //  - Home
