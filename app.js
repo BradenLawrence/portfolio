@@ -73,6 +73,10 @@ app.get("/portfolio/:id", function(request, response){
 })
 
 
+app.use(function(req, res, next){
+    res.status(404).redirect("/portfolio");
+});
+
 //  - New
 
 //  - Create
