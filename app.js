@@ -60,15 +60,11 @@ app.get("/portfolio", function(request, response){
 //  - Show
 app.get("/portfolio/:id", function(request, response){
     Project.findOne({_id: request.params.id}).populate("images").exec(function(error, returnedProject){
-        if(error) {
-            response.redirect("/portfolio")
-        } else {
         returnedProject.images.sort(function(a,b){
             // Same as above, but for images
             return a.sort > b.sort
         })
         response.render("show", {project: returnedProject})
-    }
     })
 })
 
